@@ -1,5 +1,11 @@
 # JWT-token-based-Security-Example
 
+1- first goes to class SecurityConfiguration extends WebSecurityConfigurerAdapter for set auth.userDetailsService(userService)  from database
+2- goes to configure method for authorizeRequests().antMatchers("/authenticate").permitAll()
+3- then  authenticationManager.authenticate for authrentication username and password.
+4- take user userService.loadUserByUsername(jwtRequest.getUsername() 
+5- generate token return token.
+
 JWT Working Flow Chart
 ![JWT_Working](https://user-images.githubusercontent.com/57706022/151702851-332535e3-970c-456d-a9cc-12a148ab9d63.png)
 
